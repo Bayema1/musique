@@ -1,5 +1,31 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
-    music.play(music.createSong(hex`0078000408040100001c00010a006400f401640000040000000000000000000000000005000004960000000800012408001000012010001400012414001800012418002000012020002400012224002800012428002c0001252c003000012430003400012234003800012738003c0001243c004000012040004800012448005000012050005400012454005800012458006000012060006400012264006800012468006c0001256c0070000124700074000122740078000127780080000120`), music.PlaybackMode.UntilDone)
+    if (controller.A.isPressed()) {
+        music.stopAllSounds()
+        tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)
+        controller.moveSprite(mySprite)
+    }
 })
+let mySprite: Sprite = null
 scene.setBackgroundColor(1)
 tiles.setCurrentTilemap(tilemap`niveau1`)
+mySprite = sprites.create(img`
+    f f f . . . . . . . . . . . . . 
+    f 1 1 f f f . . . . . . . . . . 
+    f 1 1 1 1 1 f f . . . . . . . . 
+    . f 1 1 1 1 1 1 f f f . . . . . 
+    . f 1 1 1 1 1 1 1 1 1 f f f . . 
+    . f 1 1 1 1 1 1 1 1 1 1 1 1 f . 
+    . . f 1 1 1 1 1 1 1 1 1 1 f . . 
+    . . f 1 1 1 1 1 1 1 1 1 f . . . 
+    . . . f 1 1 1 1 1 1 1 f . . . . 
+    . . . f 1 1 1 1 1 1 1 1 f . . . 
+    . . . f 1 1 1 1 1 1 1 1 1 f . . 
+    . . . . f 1 1 1 f 1 1 1 1 1 f . 
+    . . . . f 1 1 f . f 1 1 1 1 1 f 
+    . . . . f 1 f . . . f 1 1 1 f . 
+    . . . . . f . . . . . f 1 f . . 
+    . . . . . . . . . . . . f . . . 
+    `, SpriteKind.Player)
+controller.moveSprite(mySprite)
+scene.cameraFollowSprite(mySprite)
+tiles.placeOnRandomTile(mySprite, assets.tile`myTile0`)

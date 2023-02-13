@@ -10,12 +10,6 @@
         "tilemapTile": true,
         "displayName": "myTile0"
     },
-    "tile1": {
-        "data": "hwQQABAAAAAAAIiIiIgAAACIiIiIiIgAgIhV7u5ViAiAWFLu7iWFCIglUu7uJVKIiFVVVVVVVYiId1eqqnV3iIh3V6qqdXeIiHdXqqp1d4iId1eqqnV3iIhVVVVVVVWIiCVS7u4lUoiAWFLu7iWFCICIVe7uVYgIAIiIiIiIiAAAAIiIiIgAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile"
-    },
     "niveau1": {
         "id": "niveau1",
         "mimeType": "application/mkcd-tilemap",
@@ -46,7 +40,7 @@
             "sprites.dungeon.stairNorth",
             "sprites.dungeon.stairLarge",
             "sprites.castle.tileDarkGrass2",
-            "myTiles.tile1"
+            "myTiles.tile2"
         ],
         "displayName": "niveau1"
     },
